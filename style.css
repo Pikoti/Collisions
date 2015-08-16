@@ -14,9 +14,9 @@
 }
 
 .elements {
-	position : absolute;
-	border-radius: 50%;
-	width : 20px;
-	height : 20px;	
+    position : absolute;
+    border-radius: 50%;
+    width : 20px;
+    height : 20px;	
     background: red;
 }
