@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+#playArea {
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 800px;
+    height: 560px;
+    background: #7FFFD4;	
+}
+
+.elements {
+	position : absolute;
+	border-radius: 50%;
+	width : 20px;
+	height : 20px;	
+    background: red;
+}
