@@ -138,7 +138,7 @@ function resetColliders() {
     for (i = 0; i < n; i++) {
         balls[i].collider = -1;
         balls[i].update = false;
-	}
+     }
 }
 
 function update () {
