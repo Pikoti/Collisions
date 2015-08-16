@@ -61,7 +61,7 @@ function init(n) {
         balls[i].onBoundY = false;
         balls[i].update = false;
         balls[i].collider = -1;
-	}
+    }
 }
 
 //init the DOM
