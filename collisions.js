@@ -54,13 +54,13 @@ function init(n) {
         balls[i].bottom = balls[i].y;
         balls[i].left = balls[i].x;
         balls[i].right = balls[i].x + ball.w;
-		balls[i].centerX = balls[i].x + ball.w;
-		balls[i].centerY = balls[i].y + ball.h;
-		balls[i].onBound = false;
+        balls[i].centerX = balls[i].x + ball.w;
+	    balls[i].centerY = balls[i].y + ball.h;
+	    balls[i].onBound = false;
         balls[i].onBoundX = false;
         balls[i].onBoundY = false;
-		balls[i].update = false;
-		balls[i].collider = -1;
+	    balls[i].update = false;
+	    balls[i].collider = -1;
 	}
 }
 
