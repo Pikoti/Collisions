@@ -43,9 +43,9 @@ function myRandom(min, max) {
 
 //init settings
 function init(n) {
-	for (i = 0; i < n; i++) {
-		balls[i] = {};
-		nextBalls[i] = {};
+    for (i = 0; i < n; i++) {
+        balls[i] = {};
+        nextBalls[i] = {};
         balls[i].x = myRandom(bounds.xMin, bounds.xMax - ball.w);
         balls[i].y = myRandom(bounds.yMin, bounds.yMax - ball.h);
         balls[i].vx = myRandom(100, 400);
@@ -55,12 +55,12 @@ function init(n) {
         balls[i].left = balls[i].x;
         balls[i].right = balls[i].x + ball.w;
         balls[i].centerX = balls[i].x + ball.w;
-	    balls[i].centerY = balls[i].y + ball.h;
-	    balls[i].onBound = false;
+        balls[i].centerY = balls[i].y + ball.h;
+        balls[i].onBound = false;
         balls[i].onBoundX = false;
         balls[i].onBoundY = false;
-	    balls[i].update = false;
-	    balls[i].collider = -1;
+        balls[i].update = false;
+        balls[i].collider = -1;
 	}
 }
 
