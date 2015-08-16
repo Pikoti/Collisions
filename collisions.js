@@ -73,7 +73,7 @@ function createDom (n) {
         document.getElementById('playArea').appendChild(el[i]);
         el[i].style.left = balls[i].x + 'px';
         el[i].style.bottom = balls[i].y + 'px';
-	}
+     }
 }
 
 init(n);
