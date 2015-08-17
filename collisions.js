@@ -166,10 +166,10 @@ function manageBounds () {
 //Detection of collision against bounds
 function boundDetector () {
     if (balls[i].right >= bounds.xMax || balls[i].left <= bounds.xMin) {
-        balls[i].onBound = balls[i].onBoundX = true;
+        balls[i].onBoundX = true;
     }
     if (balls[i].top >= bounds.yMax || balls[i].bottom <= bounds.yMin) {
-        balls[i].onBound = balls[i].onBoundY =  true;
+        balls[i].onBoundY =  true;
     }
     if (balls[i].onBoundX && balls[i].onBoundX) {
         balls[i].onCorner += 1;
