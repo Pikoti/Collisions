@@ -212,7 +212,7 @@ function reIncrementPosition () {
 //Set new velocities after collision choc on ball
 function updateVelocityBall() {
     var newi = balls[i].collider;
-    balls[i].angle += (180 - balls[newi].angle);
+    balls[i].angle += (180 - balls[i].angle);
     balls[i].vx = (balls[i].v0) * Math.cos(balls[i].angle);
     balls[i].vy = (balls[i].v0) * Math.sin(balls[i].angle);	
 
