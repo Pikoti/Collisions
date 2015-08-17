@@ -4,7 +4,6 @@ var n = 20;  //number of balls in the play area
 
 var i = 0;
 var j = 0;
-var k = 0;
 
 var radius = 10;
 var impactDistance = 2 * radius;
@@ -46,8 +45,8 @@ function init(n) {
         nextBalls[i] = {};
         balls[i].x = myRandom(bounds.xMin, bounds.xMax - ball.w);
         balls[i].y = myRandom(bounds.yMin, bounds.yMax - ball.h);
-		balls[i].v0 = myRandom(100, 200);
-		balls[i].angle = myRandom(0,360);
+        balls[i].v0 = myRandom(100, 200);
+        balls[i].angle = myRandom(0,360);
         balls[i].vx = (balls[i].v0) * Math.cos(balls[i].angle);
         balls[i].vy = (balls[i].v0) * Math.sin(balls[i].angle);
         balls[i].top = balls[i].y + ball.h;
@@ -59,7 +58,7 @@ function init(n) {
         balls[i].onBoundX = false;
         balls[i].onBoundY = false;
         balls[i].veloUpdate = false;
-		balls[i].onCorner = 0;
+        balls[i].onCorner = 0;
         balls[i].collider = -1;
     }
 }
@@ -81,7 +80,7 @@ function resetColliders() {
     for (i = 0; i < n; i++) {
         balls[i].collider = -1;
         balls[i].veloUpdate = false;
-	}
+    }
 }
 
 //init and start
@@ -99,10 +98,10 @@ function loop() {
 function update () {	
     resetColliders();
     getDt();
-	for (i = 0; i < n; i++) {
+    for (i = 0; i < n; i++) {
         if (balls[i].onCorner >= 8) {		
-		    reIncrementPosition();
-	    }
+            reIncrementPosition();
+	}
         integrate(balls[i].x,balls[i].y,balls[i].vx,balls[i].vy,game.dt);
         setData();
         boundDetector();
@@ -183,8 +182,7 @@ function collisionRecord () {
         var testDistX = balls[i].centerX - balls[j].centerX;
         var testDistY = balls[i].centerY - balls[j].centerY;
         if (Math.abs(testDistX) <= impactDistance && Math.abs(testDistY) <= impactDistance && i != j) {
-             balls[i].collider = j;			
-             k = k + 1;
+             balls[i].collider = j;
         }
     }
 }
@@ -217,11 +215,11 @@ function updateVelocityBall() {
     balls[i].angle += (180 - balls[newi].angle);
     balls[i].vx = (balls[i].v0) * Math.cos(balls[i].angle);
     balls[i].vy = (balls[i].v0) * Math.sin(balls[i].angle);	
-		
+
     balls[newi].angle += (180 - balls[newi].angle);
     balls[newi].vx = (balls[newi].v0) * Math.cos(balls[newi].angle);
     balls[newi].vy = (balls[newi].v0) * Math.sin(balls[newi].angle);
-		
+
     balls[i].veloUpdate = true;
     balls[newi].veloUpdate = true;
 }
